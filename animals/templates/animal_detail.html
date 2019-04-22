@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Animal Details</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+    <div class="col-lg-6">
+        <img src="{{animal.image_url}}" style="width:100%" alt="">
+    </div>
+    <div class="col-lg-6">
+        <div class="row">
+            <div class="col-lg-12" style="margin-top: 20%">
+                <h3>Name: {{animal.name}}</h3>
+                <h3>Kind: {{animal.get_kind_display.lower}}</h3>
+                <h3>Age: {{animal.age}}</h3>
+                <h3>Breed: {{animal.breed}}</h3>
+                <p>Description: {{animal.description}}</p>
+            </div>
+            <a class="btn btn-primary" href="{% url 'animals:edit' animal.id%}">Edit {{animal.name}}</a>
+            <a class="btn btn-secondary" href="{% url 'animals:all' %}">All animals</a>
+
+        </div>
+    </div>
+</div>
+    </div>
+</body>
+</html>
