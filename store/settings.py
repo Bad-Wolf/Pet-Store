@@ -31,17 +31,19 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'accounts',
-    'animals',
-    'forum',
-    'rest_framework',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
+    'accounts',
+    'animals',
+    'forum',
+    'rest_framework',
+    'rest_framework.authtoken',
+    'rest_auth',
+    'rest_accounts',
 ]
 
 MIDDLEWARE = [
@@ -57,6 +59,8 @@ MIDDLEWARE = [
 ROOT_URLCONF = 'store.urls'
 
 LOGOUT_REDIRECT_URL = '/accounts/login/'
+PASSWORD_RESET_DONE_REDIRECT_URL = '/'
+
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
