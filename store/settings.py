@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'accounts',
     'animals',
     'forum',
+    'books',
     'rest_framework',
     'rest_framework.authtoken',
     'rest_auth',
@@ -58,7 +59,10 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'store.urls'
 
+LOGIN_REDIRECT_URL = '/accounts/profile/'
+
 LOGOUT_REDIRECT_URL = '/accounts/login/'
+
 PASSWORD_RESET_DONE_REDIRECT_URL = '/'
 
 
